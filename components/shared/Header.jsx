@@ -1,27 +1,22 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-} from 'reactstrap';
+// import Link from 'next/link';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
+
+import ActiveLink from './ActiveLink';
 
 const BsNavLink = (props) => {
   const { href, title } = props;
   return (
-    <Link href={href}>
+    <ActiveLink activeClassName='active' href={href}>
       <a className='nav-link port-navbar-link'>{title}</a>
-    </Link>
+    </ActiveLink>
   );
 };
 
 const BsNavBrand = () => (
-  <Link href='/'>
+  <ActiveLink activeClassName='active' href='/'>
     <a className='navbar-brand port-navbar-brand'>Filip Jerga</a>
-  </Link>
+  </ActiveLink>
 );
 
 const Header = () => {
