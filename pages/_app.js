@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} appProps='Hello From App' />
+        <Component {...pageProps} />
       </ThemeProvider>
     </>
   );
