@@ -1,29 +1,23 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import React from 'react';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/main.scss';
-import '../styles/globals.css';
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+class App extends React.Component {
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {};
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+
+    return { pageProps };
   }
-`;
 
-const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
-};
-
-export default function App({ Component, pageProps }) {
-  return (
-    <>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </>
-  );
+  render() {
+    const { Component, pageProps } = this.props;
+    return <Component {...pageProps} />;
+  }
 }
+
+export default App;
