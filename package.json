@@ -8,6 +8,22 @@
     "build": "next build",
     "start": "next start"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cardfaux/NextJSPortfolioServerless.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "nodejs",
+    "serverless",
+    "express"
+  ],
+  "bugs": {
+    "url": "https://github.com/cardfaux/NextJSPortfolioServerless/issues"
+  },
+  "homepage": "https://github.com/cardfaux/NextJSPortfolioServerless",
+  "license": "ISC",
   "dependencies": {
     "next": "10.0.3",
     "react": "17.0.1",
