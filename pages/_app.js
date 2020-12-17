@@ -1,4 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+
+import '../styles/main.scss';
 import '../styles/globals.css';
 
 const GlobalStyle = createGlobalStyle`
@@ -20,7 +22,7 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Component {...pageProps} appProps='Hello From App' />
       </ThemeProvider>
     </>
   );
