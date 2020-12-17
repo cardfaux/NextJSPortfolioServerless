@@ -44,7 +44,6 @@ const Header = () => {
           dark
           expand='md'
         >
-          {/* <BsNavBrand /> */}
           <NavbarToggler onClick={toggle} />
           <StyledMobileNav isOpen={isOpen} navbar>
             <Nav className='mr-auto' navbar>
