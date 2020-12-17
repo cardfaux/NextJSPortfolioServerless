@@ -4,11 +4,13 @@ import Typed from 'react-typed';
 
 const ROLES = [
   'Developer',
-  'Tech Lover',
-  'Team Player',
-  'Course Creator',
+  'Engineer',
+  'BackEnd',
+  'FrontEnd',
+  'NodeJS',
+  'FullStack',
   'React.js',
-  'Angular',
+  'Blender',
 ];
 const Index = () => {
   return (
@@ -24,7 +26,7 @@ const Index = () => {
                 <div className={`flipper`}>
                   <div className='back'>
                     <div className='hero-section-content'>
-                      <h2> Full Stack Web Developer </h2>
+                      <h2> Full Stack Software Engineer </h2>
                       <div className='hero-section-content-intro'>
                         Have a look at my portfolio and job history.
                       </div>
@@ -40,7 +42,7 @@ const Index = () => {
             <Col md='6' className='hero-welcome-wrapper'>
               <div className='hero-welcome-text'>
                 <h1>
-                  Welcome to the portfolio website of Filip Jerga. Get informed,
+                  Welcome to the portfolio website of James Hagood. Get informed,
                   collaborate and discover projects I was working on through the
                   years!
                 </h1>

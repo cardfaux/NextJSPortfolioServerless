@@ -15,7 +15,7 @@ const BsNavLink = (props) => {
 
 const BsNavBrand = () => (
   <ActiveLink activeClassName='active' href='/'>
-    <a className='navbar-brand port-navbar-brand'>Filip Jerga</a>
+    <a className='navbar-brand port-navbar-brand'>James Hagood</a>
   </ActiveLink>
 );
 
