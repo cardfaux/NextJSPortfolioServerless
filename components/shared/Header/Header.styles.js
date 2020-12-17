@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NavItem } from 'reactstrap';
+import { NavItem, Collapse } from 'reactstrap';
 
 import ActiveLink from '../ActiveLink';
 
@@ -17,4 +17,10 @@ export const StyledBsNavLink = styled(BsNavLink)`
 `;
 export const StyledNavItem = styled(NavItem)`
   cursor: pointer;
+`;
+
+export const StyledMobileNav = styled(Collapse)`
+  @media (max-width: 767px) {
+    background-color: rgba(3, 151, 219, 1);
+  }
 `;

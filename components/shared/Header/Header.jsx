@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
+import { Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
+import styled from 'styled-components';
 
 import ActiveLink from '../ActiveLink';
-import { StyledBsNavLink, StyledNavItem } from './Header.styles';
+import { StyledBsNavLink, StyledNavItem, StyledMobileNav } from './Header.styles';
 
 export const BsNavLink = (props) => {
   const { href, title } = props;
@@ -32,45 +33,62 @@ const Header = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar
-        className='port-navbar port-default absolute'
-        color='transparent'
-        dark
-        expand='md'
-      >
+    <>
+      <StyledBrandContainer>
         <BsNavBrand />
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className='mr-auto' navbar>
-            <NavItem className='port-navbar-item'>
-              <StyledBsNavLink href='/' title='Home' />
-            </NavItem>
-            <NavItem className='port-navbar-item'>
-              <StyledBsNavLink href='/about' title='About' />
-            </NavItem>
-            <NavItem className='port-navbar-item'>
-              <StyledBsNavLink href='/portfolios' title='Portfolios' />
-            </NavItem>
-            <NavItem className='port-navbar-item'>
-              <StyledBsNavLink href='/blogs' title='Blogs' />
-            </NavItem>
-            <NavItem className='port-navbar-item'>
-              <StyledBsNavLink href='/cv' title='Cv' />
-            </NavItem>
-          </Nav>
-          <Nav navbar>
-            <StyledNavItem className='port-navbar-item'>
-              <LoginLink />
-            </StyledNavItem>
-            <StyledNavItem className='port-navbar-item'>
-              <LogoutLink />
-            </StyledNavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+      </StyledBrandContainer>
+      <div>
+        <Navbar
+          className='port-navbar port-default absolute'
+          color='transparent'
+          dark
+          expand='md'
+        >
+          {/* <BsNavBrand /> */}
+          <NavbarToggler onClick={toggle} />
+          <StyledMobileNav isOpen={isOpen} navbar>
+            <Nav className='mr-auto' navbar>
+              <NavItem className='port-navbar-item'>
+                <StyledBsNavLink href='/' title='Home' />
+              </NavItem>
+              <NavItem className='port-navbar-item'>
+                <StyledBsNavLink href='/about' title='About' />
+              </NavItem>
+              <NavItem className='port-navbar-item'>
+                <StyledBsNavLink href='/portfolios' title='Portfolios' />
+              </NavItem>
+              <NavItem className='port-navbar-item'>
+                <StyledBsNavLink href='/blogs' title='Blogs' />
+              </NavItem>
+              <NavItem className='port-navbar-item'>
+                <StyledBsNavLink href='/cv' title='Cv' />
+              </NavItem>
+            </Nav>
+            <Nav navbar>
+              <StyledNavItem className='port-navbar-item'>
+                <LoginLink />
+              </StyledNavItem>
+              <StyledNavItem className='port-navbar-item'>
+                <LogoutLink />
+              </StyledNavItem>
+            </Nav>
+          </StyledMobileNav>
+        </Navbar>
+      </div>
+    </>
   );
 };
 
 export default Header;
+
+const StyledBrandContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  background-color: rgba(219, 169, 25, 1);
+  a {
+    color: rgba(33, 37, 41, 1);
+    &:hover {
+      color: rgba(250, 250, 250, 1);
+    }
+  }
+`;
