@@ -4,14 +4,13 @@ import Typed from 'react-typed';
 import Image from 'next/image';
 
 const ROLES = [
-  'Developer',
-  'Engineer',
   'BackEnd',
   'FrontEnd',
   'NodeJS',
-  'FullStack',
   'React.js',
-  'Blender',
+  'FullStack',
+  'Engineer',
+  'Developer',
 ];
 const Index = () => {
   return (
