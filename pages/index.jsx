@@ -1,6 +1,7 @@
 import BaseLayout from '@/components/layouts/BaseLayout';
 import { Container, Row, Col } from 'reactstrap';
 import Typed from 'react-typed';
+import Image from 'next/image';
 
 const ROLES = [
   'Developer',
@@ -17,7 +18,12 @@ const Index = () => {
     <BaseLayout className='cover'>
       <div className='main-section'>
         <div className='background-image'>
-          <img src='/images/background-index.png' />
+          <Image
+            src='/images/background-index.png'
+            alt='portfolio placeholder image'
+            width={1548}
+            height={500}
+          />
         </div>
         <Container>
           <Row>
@@ -31,7 +37,13 @@ const Index = () => {
                         Have a look at my portfolio and job history.
                       </div>
                     </div>
-                    <img className='image' src='/images/section-1.png' />
+                    <Image
+                      className='image'
+                      src='/images/section-1.png'
+                      alt='portfolio image second'
+                      width={400}
+                      height={500}
+                    />
                     <div className='shadow-custom'>
                       <div className='shadow-inner'> </div>
                     </div>
