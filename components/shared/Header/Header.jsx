@@ -18,14 +18,20 @@ export const BsNavLink = (props) => {
   );
 };
 
-const BsNavBrand = () => (
-  <ActiveLink activeClassName='active' href='/'>
-    <a className='navbar-brand port-navbar-brand'>James Hagood</a>
-  </ActiveLink>
-);
+const BsNavBrand = () => {
+  return (
+    <ActiveLink activeClassName='active' href='/'>
+      <a className='navbar-brand port-navbar-brand'>James Hagood</a>
+    </ActiveLink>
+  );
+};
 
 const LoginLink = () => {
-  return <span className='nav-link port-navbar-link clickable'>Login</span>;
+  return (
+    <a className='nav-link port-navbar-link' href='/api/v1/login'>
+      Login
+    </a>
+  );
 };
 
 const LogoutLink = () => {
