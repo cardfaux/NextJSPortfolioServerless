@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import { Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
 import styled from 'styled-components';
 
-import ActiveLink from '../ActiveLink';
-import { StyledBsNavLink, StyledNavItem, StyledMobileNav } from './Header.styles';
+import ActiveLink from 'components/shared/ActiveLink';
+import {
+  StyledBsNavLink,
+  StyledNavItem,
+  StyledMobileNav,
+} from 'components/shared/Header/Header.styles';
 
 export const BsNavLink = (props) => {
   const { href, title } = props;
