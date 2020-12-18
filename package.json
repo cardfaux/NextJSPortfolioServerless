@@ -35,7 +35,8 @@
     "react-typed": "^1.2.0",
     "reactstrap": "^8.7.1",
     "sass": "^1.30.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "swr": "^0.3.9"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.12.0",
