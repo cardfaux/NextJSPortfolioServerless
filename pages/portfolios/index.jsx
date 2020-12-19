@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import BaseLayout from 'components/layouts/BaseLayout';
 import BasePage from 'components/BasePage';
@@ -6,7 +7,7 @@ import { useRouter } from 'next/router';
 import { useGetUser } from 'actions/user';
 import { useDeletePortfolio } from 'actions/portfolios';
 import PortfolioApi from 'lib/api/portfolios';
-import PortfolioCard from 'components/PortfolioCard';
+import PortfolioCard from 'components/shared/PortfolioCard';
 import { isAuthorized } from 'utils/auth0';
 
 const Portfolios = ({ portfolios: initialPortfolios }) => {
@@ -74,7 +75,7 @@ export async function getStaticProps() {
   const portfolios = json.data;
   return {
     props: { portfolios },
-    unstable_revalidate: 1,
+    revalidate: 1,
   };
 }
 
